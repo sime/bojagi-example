@@ -7,23 +7,10 @@ const HANDLE_SIZE = 24;
 
 const Bar = styled.div`
   margin: 16px 0;
-  height: 6px; 
+  height: 8px; 
   width: 100%;
   border-radius: 4px;
-  background-color: #eeeeee;
-  border: 1px solid #ddd;
-  position: relative;
-`;
-
-const ActiveBar = styled.div`
-  height: 6px;
-  width: calc(${props => props.position}% - ${HANDLE_SIZE * 0.5}px);
-  border-radius: 4px;
   background-color: #af1e66;
-  border: 1px solid #af1e66;
-  position: absolute;
-  top: 0;
-  left: 0;
 `;
 
 const Handle = styled.div`
@@ -87,7 +74,6 @@ export const Slider = () => {
   }, [dragged, barRef]);
 
   return <Bar ref={barRef}>
-    <ActiveBar position={position * 100} />
     <Handle position={position * 100} onMouseDown={handleDragStart} />
   </Bar>;
 }
