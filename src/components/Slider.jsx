@@ -15,6 +15,7 @@ const Bar = styled.div`
   position: relative;
 `;
 
+
 const ActiveBar = styled.div`
   height: 6px;
   width: calc(${props => props.position}% - ${HANDLE_SIZE * 0.5}px);
