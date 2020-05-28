@@ -29,7 +29,6 @@ export const Button = styled.button`
     border-style: dotted;
   `}
 
-
   outline: 0;
   border-radius: 6px;
   transition: background-color 0.5s;
